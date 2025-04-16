@@ -19,3 +19,34 @@
 # How many sides? 20
 # Here are the results: [18, 19, 6, 8, 13, 6, 6, 6, 18, 12, 20, 10, 14, 8, 14, 17, 12, 15, 20, 17]
 
+import random
+
+# Get inputs from user about the dice
+
+num_dice = int(input("How many dice do you want to roll?"))
+num_sides = int(input("How many sides per die?"))
+
+# Define the function to roll dice
+def myFunctionDice(num_dice, num_sides):
+    myList = []
+    rolls = []
+    for i in range(num_dice, num_sides):
+        roll = random.randint(1, num_sides)
+        rolls.append(roll)
+    return rolls
+
+# Validate input (check if it is correct)
+
+if num_dice <= 0 or num_sides <= 1:
+    print("Error: sides and dice count are not valid.")
+else:
+    # Nothing wrong, call your function and print the result
+
+    results = myFunctionDice(num_dice, num_sides)
+
+results = myFunctionDice(3, 8) # Roll 7 dice
+print("Here are the results:", results)
+    
+    
+
+    

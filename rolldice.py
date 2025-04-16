@@ -30,7 +30,7 @@ num_sides = int(input("How many sides per die?"))
 def myFunctionDice(num_dice, num_sides):
     myList = []
     rolls = []
-    for i in range(num_dice, num_sides):
+    for i in range(num_dice):
         roll = random.randint(1, num_sides)
         rolls.append(roll)
     return rolls
